@@ -1,0 +1,25 @@
+class Matchmaker:
+    def __init__(self):
+        self.questions = [
+            "What is your favorite hobby?",
+            "What type of music do you enjoy?",
+            "Do you prefer cats or dogs?",
+            "What is your dream vacation destination?",
+            "What is your favorite movie genre?"
+        ]
+        self.answers = []
+
+    def ask_questions(self):
+        for question in self.questions:
+            answer = input(question + " ")
+            self.answers.append(answer)
+
+    def display_answers(self):
+        for i, answer in enumerate(self.answers):
+            print(f"Question {i + 1}: {self.questions[i]}")
+            print(f"Your answer: {answer}")
+
+if __name__ == "__main__":
+    matchmaker = Matchmaker()
+    matchmaker.ask_questions()
+    matchmaker.display_answers()
